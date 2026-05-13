@@ -32,7 +32,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # 🔥 STEP 3 - Docker Build
       - name: Build Docker image
-              run: docker build -t shivaaye04/iris-api:latest .
-      - name: push docker image
+        run: docker build -t shivaaye04/iris-api:latest .
+
+      # 🔥 STEP 4 - Docker Push
+      - name: Push Docker image
         run: docker push shivaaye04/iris-api:latest
