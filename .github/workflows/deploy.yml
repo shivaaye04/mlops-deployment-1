@@ -33,6 +33,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build Docker image
-          run: docker build -t shivaaye04/iris-api:latest .
+              run: docker build -t shivaaye04/iris-api:latest .
       - name: push docker image
-          run: docker push shivaaye04/iris-api:latest
+        run: docker push shivaaye04/iris-api:latest
