@@ -25,3 +25,10 @@ jobs:
 
       - name: Run basic check
         run: echo "Project setup successful 🚀"
+
+      # 🔥 STEP 2 - DockerHub Login
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
