@@ -38,7 +38,4 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
 
           script: |
-            cd /home/ubuntu
-
-            kubectl apply -f deployment.yaml
-            kubectl apply -f service.yaml
+            echo "connected to EC2"
