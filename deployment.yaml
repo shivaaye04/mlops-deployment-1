@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlflow-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mlflow-app
+  template:
+    metadata:
+      labels:
+        app: mlflow-app
+    spec:
+      containers:
+        - name: mlflow-app
+          image: shivaaye04/iris-api:latest
+          ports:
+            - containerPort: 8000
